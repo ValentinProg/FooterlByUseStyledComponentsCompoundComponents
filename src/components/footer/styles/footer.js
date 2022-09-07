@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     padding: 80px 60px;
-    background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112, 71, 247, 1) 100%)
+    background: radial-gradient(circle, rgba(92,39,251,1) 0%, rgba(112, 71, 247, 1) 100%);
 `
 
 export const Wrapper = styled.div`
@@ -21,8 +21,32 @@ export const Column = styled.div`
     
 `
 
-export const Row = styled.div``
+export const Row = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-grap: 20px;
 
-export const Link = styled.div``
 
-export const Title = styled.div``
+    @media (max-width: 1000px) {
+        grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
+    }
+`
+
+export const Link = styled.a`
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-dicoration: none;
+
+    &:hover {
+        color: #ff9c00;
+        transition: 200ms easy-in;
+    }
+`
+
+export const Title = styled.p`
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-weight: bold;
+`
